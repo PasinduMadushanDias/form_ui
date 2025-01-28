@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern User Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="https://via.placeholder.com/100" alt="User Avatar">
+      <h2>Jane Smith</h2>
+      <p>UI/UX Designer</p>
+    </div>
+    <div class="profile-tabs">
+      <button class="tab active" data-tab="about">About</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </div>
+    <div class="tab-content" id="about">
+      <p>Hello! I am a passionate designer with experience in creating user-friendly and visually appealing designs.</p>
+    </div>
+    <div class="tab-content" id="projects" style="display: none;">
+      <p>My latest projects include a mobile banking app, a fitness tracker, and a food delivery website.</p>
+    </div>
+    <div class="tab-content" id="contact" style="display: none;">
+      <p>Email: jane@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
