@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <header>
+      <button id="prevMonth">❮</button>
+      <h2 id="currentMonth">January 2025</h2>
+      <button id="nextMonth">❯</button>
+    </header>
+    <div class="calendar-grid">
+      <div class="day-name">Sun</div>
+      <div class="day-name">Mon</div>
+      <div class="day-name">Tue</div>
+      <div class="day-name">Wed</div>
+      <div class="day-name">Thu</div>
+      <div class="day-name">Fri</div>
+      <div class="day-name">Sat</div>
+    </div>
+    <div class="days-grid"></div>
+  </div>
+
+  <div class="event-modal" id="eventModal">
+    <input type="text" id="eventInput" placeholder="Add event">
+    <button id="addEvent">Add</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

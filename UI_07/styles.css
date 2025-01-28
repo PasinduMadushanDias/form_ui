@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+  }
+  
+  .editable-profile {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .editable-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  h2, p {
+    margin: 10px 0;
+  }
+  
+  [contenteditable] {
+    outline: 2px dashed #4b56cc;
+    padding: 5px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #13b691;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0e9c7b;
+  }
+  
