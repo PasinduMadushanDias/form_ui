@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        .dashboard {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dashboard.active {
+            display: block;
+        }
+        .dark {
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#" onclick="showDashboard('minimal')">Minimal</a></li>
+            <li><a href="#" onclick="showDashboard('dark')">Dark Mode</a></li>
+            <li><a href="#" onclick="showDashboard('admin')">Admin Panel</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="minimal" class="dashboard minimal active">
+            <h1>Minimalist Dashboard</h1>
+            <p>A clean and simple dashboard design.</p>
+        </section>
+        
+        <section id="dark" class="dashboard dark">
+            <h1>Dark Mode Dashboard</h1>
+            <p>A stylish dark-themed interface.</p>
+        </section>
+        
+        <section id="admin" class="dashboard admin">
+            <h1>Admin Panel Dashboard</h1>
+            <p>Feature-rich admin panel with charts.</p>
+            <canvas id="chart"></canvas>
+        </section>
+    </main>
+
+    <script>
+        function showDashboard(id) {
+            document.querySelectorAll('.dashboard').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
